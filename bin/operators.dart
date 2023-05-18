@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(){
 ///1. arithmetic operator -> + - * /  %  ~/
   dynamic a = 100, b = 70;
@@ -52,7 +54,7 @@ void main(){
   print('--x = ${--x}');// x = x - 1 = 101 - 1= 100
   print(x++); // x = 100  background  x = 101 will be stored  (x+1 = 100+1 = 101 )
 
-  ///6. typetest operator   is    is!
+  ///6. typetest operator   is  ,  is!
   var name = "AlAN";
   print(name is! String);
   print(name is int);
@@ -70,4 +72,15 @@ void main(){
   String pass  = "admin1";
   var out = uname =='admin' && pass == '123' ? "Login Success" : 'Login Failed';
   print(out);
+
+  ///largest of 3
+   int i =10, j = 2, k =100;
+   var res  = i > j ?  (i > k ? i : k)  :   (j > k ? j : k) ;
+   print('$res is largest');
+
+   /// null aware operator  =>  condition ?? statement tobe executed if the condition is null;
+  String? pwd ;
+  var re = pwd?.length ?? "password must not be null";
+  print(re);
+
 }
