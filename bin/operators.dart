@@ -79,8 +79,8 @@ void main(){
    print('$res is largest');
 
    /// null aware operator  =>  condition ?? statement tobe executed if the condition is null;
-  String? pwd ;
-  var re = pwd?.length ?? "password must not be null";
+  String? phone ;
+  var re = phone?.length ?? "password must not be null";
   print(re);
 
 }
