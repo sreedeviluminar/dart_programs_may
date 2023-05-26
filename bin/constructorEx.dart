@@ -22,9 +22,9 @@ void main(){
   //int a = 10;
   var a = 10 ;
       a = 20;
-    // A obj = A(); // obj  is an object of class A
+    // A obj  = A(); // obj  is an object of class A
      var obj  = A();
-     //  obj  = A.abc("jhgfds");  // replaces the default constructor
+     //  obj  = A.abc("jhgfds");   // replaces the default constructor
      var obj1 = A();               // new object is created
    obj.funcname();
 }
