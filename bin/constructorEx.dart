@@ -1,30 +1,25 @@
 class A{
-  ///default constructor
-   A(){
-     print('default constructor');
-   }
-   ///parameterised constructor
-   // A(int a, int b){
-   //  print('sum = ${a+b}');
-   // }
-   /// named constructor
-   A.one(){
-     print('default named constructor');
-   }
-   A.abc(String name){
-     print('parameterised named constructor $name');
-   }
-   void funcname(){
-     print('default function');
-   }
+  // default constructor 
+  A(){
+    print("default constructor");
+  } 
+  // //parameterised constructor
+  // A(int a , int b){
+  //  
+  // }
+  //default named constructor 
+  A.name1(){
+    print("default name constructot");
+  }
+  
+  //parameterised  named constructor
+  A.name2(String a){
+    print("parameterised name constructot $a");
+  }
 }
+
 void main(){
-  //int a = 10;
-  var a = 10 ;
-      a = 20;
-    // A obj  = A(); // obj  is an object of class A
-     var obj  = A();
-     //  obj  = A.abc("jhgfds");   // replaces the default constructor
-     var obj1 = A();               // new object is created
-   obj.funcname();
+  A obj  = A();
+  A obj1 = A.name1();
+  A obj2 = A.name2("hello");
 }
