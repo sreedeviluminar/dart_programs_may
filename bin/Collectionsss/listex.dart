@@ -38,4 +38,19 @@ void main(){
   l2.addAll([10,30,50]);
   print("l2 = $l2");
 
+///3. List.from(Iterable elements, {bool growable = true})
+  var l3 = List.from(l2);
+  l3.addAll([1,1,1,]);
+  print("l3 = $l3");
+
+  ///4. List.of(Iterable<E> elements, {bool growable = true})
+  var l4 = List.of(l2);
+  l4.addAll(['a','f','h']);
+  print("l4 = $l4");
+
+///5 .List.unmodifiable(Iterable elements)
+  var l5= List.unmodifiable(l3);
+  l5[2] = 10000;
+ // l5.addAll(['a','f','h']);
+  print("l5 = $l5");
 }
