@@ -50,7 +50,23 @@ void main(){
 
 ///5 .List.unmodifiable(Iterable elements)
   var l5= List.unmodifiable(l3);
-  l5[2] = 10000;
+  //l5[2] = 10000;
  // l5.addAll(['a','f','h']);
   print("l5 = $l5");
+
+///6. List.filled( int length ,E fill ,{bool growable = false} )
+  // length = how many values we store in this list
+  // fill   = value that we stored in the list
+  var l6  = List.filled(10, 1,growable: true);
+  l6[1] = 2;
+  l6[4] = 4;
+  l6[6] = 6;
+  l6[8] = 8;
+  l6.add(100);
+  print("l6 = $l6");
+
+///7. List.generate(int length, E generator(int index),{bool growable = true});
+  var l7  = List.generate(100, (index) => (index));
+ // l7.add(101);
+  print("l7 = $l7");
 }
