@@ -15,7 +15,7 @@ class Child extends Parent{
   void add(int b) {
     int sum = 45+89+90+b;
     print("sum1 = $sum");
-    super.add(100); //  calling parent class add function
+    super.add(100); //  calling parent class add function 100 will assigned to the parameter c
   }
 }
 void main(){
