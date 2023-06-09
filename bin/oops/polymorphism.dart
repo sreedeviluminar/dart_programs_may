@@ -1,24 +1,30 @@
-//polymorphism - to achieve polymorphism method overriding/ runtime polymorphism is used
-class Parent{
-  int a = 10;
-  int b = 20;
+class Family {
+  String name = "John";
 
-  void add(int c){
-    int sum = a+b+c;
-    print("sum =$sum");
+  void details(String housename, int housephone, String location) {
+    print("House name     :  $housename");
+    print("Parent contact :  $housephone");
+    print("Place          :  $location");
   }
+  void display() {}
 }
 
-class Child extends Parent{
+class Child extends Family{
+  String name = "Vidhyodhaya";
 
   @override
-  void add(int b) {     /// in overriding parameter type should be same as parent class & parameter name can be different
-    int sum = 45+89+90+b;
-    print("sum1 = $sum");
-    super.add(100); ///  calling parent class add function 100 will assigned to the parameter c
+  void details(String studentname, int stphone, String email) {
+    print("Student name   :  $studentname");
+    print("Student contact:  $stphone");
+    print("Email          :  $email");
+    print("School         :  $name");
+    print("Father'S Name  :  ${super.name}");// calling parent class instance variable
+    super.details("MyHouse", 09876543221, "Kottayam");
+    display();   // calling parent class function which is not overriden in child class
   }
 }
 void main(){
   Child obj = Child();
-  obj.add(19); ///  calling child class add function 19 will assigned to the parameter b
+  obj.details("Adhul", 098765432908, "adhul@gmail.com");
+  //obj.display();
 }
