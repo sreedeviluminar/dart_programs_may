@@ -1,10 +1,12 @@
 import 'dart:io';
 
 void main() {
-  print("enter a number");
-  int num = int.parse(stdin.readLineSync()!);
-
+  int esum = 0, osum = 0;
   for (int i = 1; i <= 10; i++) {
-    print("$num * $i = ${num * i}");
+    if (i % 2 == 0) {
+      esum += i;
+    } else {
+      osum += i;
+    }
   }
 }
