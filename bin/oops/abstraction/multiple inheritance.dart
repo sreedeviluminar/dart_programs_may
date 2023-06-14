@@ -1,6 +1,9 @@
 /// class father and mother can be abstract or normal
 
 abstract class Father{
+  Father(){
+    print("Father constructor");
+  }
   void fdetails(String name , int age ,String job, int phone);
 }
 abstract class Mother{
