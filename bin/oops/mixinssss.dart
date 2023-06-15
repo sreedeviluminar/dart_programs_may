@@ -1,5 +1,5 @@
 mixin A{
-  int a = 100;
+  int? a ;
   void show(){
     print('inside show function'); // normal functions
   }
@@ -13,10 +13,11 @@ class C with A , B{
 
   @override
   void add() {
-    print("sum = ${a+b+c}");
+    print("sum = ${(a = 10)+b+c}");
   }
 }
 void main(){
+
   //A obj = A(); - not possible
   C obj = C();
   obj..add()..show();///double dot operator
