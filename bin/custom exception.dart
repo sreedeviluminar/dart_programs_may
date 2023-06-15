@@ -17,11 +17,9 @@ void checkAge(int age) {
     print("welcome to vote");
   } else {
     throw MyException("age should be >= 18");
-
     /// throw keyword used for calling exception explicitly
   }
 }
-
 void main() {
   print("hi . please validate ur age");
   try {
